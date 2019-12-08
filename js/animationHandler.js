@@ -13,18 +13,38 @@ function debounce(func, wait, immediate) {
     };
 };
 
-const isInViewport = (elem) => {
-    const bounding = elem.getBoundingClientRect();
+const isInViewport = (el) => {
+    let top = el.offsetTop;
+    let left = el.offsetLeft;
+    const width = el.offsetWidth;
+    const height = el.offsetHeight;
+
+    while(el.offsetParent) {
+        el = el.offsetParent;
+        top += el.offsetTop;
+        left += el.offsetLeft;
+    }
+
     return (
-        bounding.top >= 0 &&
-        bounding.left >= 0 &&
-        bounding.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-        bounding.right <= (window.innerWidth || document.documentElement.clientWidth)
+        top < (window.pageYOffset + window.innerHeight) &&
+        left < (window.pageXOffset + window.innerWidth) &&
+        (top + height) > window.pageYOffset &&
+        (left + width) > window.pageXOffset
     );
 };
 
+const landing = document.querySelector('.landing');
 const stack = document.querySelector('.stack');
 
 window.addEventListener('scroll', event => {
-    if (isInViewport(stack)){console.log('yes')}
-})
+    let children = Array.from(menu.children);
+    if (!isInViewport(landing)){
+        children.forEach(child => {
+            child.style.backgroundColor = 'black';
+        })
+    }else {
+        children.forEach(child => {
+            child.style.backgroundColor = 'white';
+        })
+    }
+});
