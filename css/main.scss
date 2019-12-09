@@ -14,7 +14,7 @@ body {
 
 .blur {
   transition: all 0.4s ease-in-out;
-  filter: blur(2px) grayscale(100%);
+  filter: blur(2px) brightness(30%);
 }
 
 .heading__light {
@@ -68,13 +68,14 @@ section:not(:first-child){
 }
 
 .nav__item {
+  text-align: right;
+  margin-top: 25px;
   &:not(:first-child){
-    margin-left: 20px;
+    margin-left: 0;
   }
   opacity: 0;
   visibility: hidden;
   display: block;
-  text-align: center;
   &.animateOnce {
     -webkit-animation: fadeInFromNone 0.3s ease-out normal forwards;
     -moz-animation: fadeInFromNone 0.3s ease-out normal forwards;
