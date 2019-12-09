@@ -1,20 +1,5 @@
-function debounce(func, wait, immediate) {
-    let timeout;
-    return function() {
-        const context = this, args = arguments;
-        const later = function() {
-            timeout = null;
-            if (!immediate) func.apply(context, args);
-        };
-        const callNow = immediate && !timeout;
-        clearTimeout(timeout);
-        timeout = setTimeout(later, wait);
-        if (callNow) func.apply(context, args);
-    };
-};
-
 const isInViewport = (el) => {
-    let top = el.offsetTop;
+    let top = el.offsetTop - 150;
     let left = el.offsetLeft;
     const width = el.offsetWidth;
     const height = el.offsetHeight;
@@ -33,18 +18,42 @@ const isInViewport = (el) => {
     );
 };
 
-const landing = document.querySelector('.landing');
-const stack = document.querySelector('.stack');
-
-window.addEventListener('scroll', event => {
+const changeMenuColorHandler = () => {
     let children = Array.from(menu.children);
     if (!isInViewport(landing)){
         children.forEach(child => {
             child.style.backgroundColor = 'black';
+        });
+        items.forEach(item => {
+            item.firstChild.style.color = 'black'
         })
     }else {
         children.forEach(child => {
             child.style.backgroundColor = 'white';
+        });
+        items.forEach(item => {
+            item.firstChild.style.color = 'white'
         })
     }
-});
+}
+
+const landing = document.querySelector('.landing');
+
+const scroll = window.requestAnimationFrame ||
+    // IE Fallback
+    function(callback){ window.setTimeout(callback, 1000/60)};
+
+const elementsToShow = document.querySelectorAll('.show-on-scroll');
+
+const loop = () => {
+    changeMenuColorHandler();
+    elementsToShow.forEach(element => {
+       if (isInViewport(element)) {
+           element.classList.add('is-visible');
+       }
+   });
+    scroll(loop);
+};
+
+// Call the loop for the first time
+loop();

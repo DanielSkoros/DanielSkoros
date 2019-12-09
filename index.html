@@ -20,33 +20,43 @@
             <i></i><i></i><i></i>
         </div>
         <ul class="nav__menu">
-            <li class="nav__item"><a href="/projects.html">Projects</a></li>
-            <li class="nav__item"><a href="/about.html">About</a></li>
-            <li class="nav__item"><a href="contact.html">Contact</a></li>
+            <li class="nav__item"><a href="#projects">Projects</a></li>
+            <li class="nav__item"><a href="#stack">Stack</a></li>
+            <li class="nav__item"><a href="#contact">Contact</a></li>
         </ul>
     </nav>
 </header>
 <div class="fullpage">
     <section class="landing">
         <h1>Daniel Skoroś</h1>
-        <h5>Specializing in creating fast and responsive React apps</h5>
-        <button class="cta cta--white">Contact me</button>
+        <h5>Aspiring front end developer from Gdynia</h5>
+        <a href="#contact">
+            <button class="cta cta--white cta--landing">Contact me</button>
+        </a>
+       <div class="social">
+           <a href="https://github.com/DanielSkoros" class="landing__github" target="_blank" rel="noopener noreferrer">
+               <i class="fab fa-github"></i>
+           </a>
+           <a href="https://www.linkedin.com/in/daniel-skoro%C5%9B-345b84198/" class="landing__github" target="_blank" rel="noopener noreferrer">
+               <i class="fab fa-linkedin-in"></i>
+           </a>
+       </div>
     </section>
-    <section class="stack">
+    <section class="stack" id="stack">
         <h1 class="heading__light">Tech stack</h1>
         <div class="stack__languages">
-            <i class="fab fa-html5"></i>
-            <i class="fab fa-css3-alt"></i>
-            <i class="fab fa-js"></i>
-            <i class="fab fa-react"></i>
-            <i class="fab fa-node"></i>
-            <i class="fab fa-github"></i>
+            <i class="fab fa-html5 show-on-scroll"></i>
+            <i class="fab fa-css3-alt show-on-scroll"></i>
+            <i class="fab fa-js show-on-scroll"></i>
+            <i class="fab fa-react show-on-scroll"></i>
+            <i class="fab fa-node show-on-scroll"></i>
+            <i class="fab fa-git show-on-scroll"></i>
         </div>
     </section>
     <hr />
-    <section class="projects">
+    <section class="projects" id="projects">
         <h1 class="heading__light">Projects</h1>
-        <div class="card">
+        <div class="card show-on-scroll">
             <div class="card__image">
                 <img src="./img/teddy.jpg" alt="Teddy and Freddy preview" class=".teddy">
             </div>
@@ -58,45 +68,49 @@
                         <button class="cta">Github</button>
                     </a>
                     <a href="https://teddy-and-freddy.herokuapp.com/" target="_blank" rel="noopener noreferrer">
-                        <button class="cta cta--filled">Heroku</button>
+                        <button class="cta cta--filled">Online</button>
                     </a>
                 </div>
             </div>
         </div>
 
-        <div class="card">
+        <div class="card show-on-scroll">
             <div class="card__image">
-                <img src="./img/teddy.jpg" alt="Teddy and Freddy preview" class=".teddy">
+                <img src="./img/gohub.jpg" alt="GoHub preview" class=".teddy">
             </div>
             <div class="card__text">
-                <h3 class="card__header">Teddy and Freddy</h3>
+                <h3 class="card__header">Gohub</h3>
                 <p class="card_description">
-                    A full stack MERN online store with plushies, blankets and pillows.
+                    PSD to HTML company site. <br />
+                    Note: mobile version of the PSD was not provided. Desktop version only right now.
                 </p>
                 <div class="buttons">
-                    <a href="https://github.com/DanielSkoros/Teddy-and-Freddy---MERN-shop" target="_blank" rel="noopener noreferrer">
+                    <a href="https://github.com/DanielSkoros/goHub" target="_blank" rel="noopener noreferrer">
                         <button class="cta">Github</button>
                     </a>
-                    <a href="https://teddy-and-freddy.herokuapp.com/" target="_blank" rel="noopener noreferrer">
-                        <button class="cta cta--filled">Heroku</button>
+                    <a href="https://danielskoros.github.io/goHub/" target="_blank" rel="noopener noreferrer">
+                        <button class="cta cta--filled">Online</button>
                     </a>
                 </div>
             </div>
         </div>
 
-        <div class="card">
+        <div class="card show-on-scroll">
             <div class="card__image">
-                <img src="./img/teddy.jpg" alt="Teddy and Freddy preview" class=".teddy">
+                <img src="./img/create.jpg" alt="WeCreate preview" class=".teddy">
             </div>
             <div class="card__text">
-                <h3 class="card__header">Teddy and Freddy</h3>
-                <p class="card_description">A full stack MERN online store with plushies, blankets and pillows.</p>
+                <h3 class="card__header">WeCreate</h3>
+                <p class="card_description">
+                    PSD to HTML site.
+                    Design was created by the awwwesomes. Mobile version available
+                </p>
                 <div class="buttons">
-                    <a href="https://github.com/DanielSkoros/Teddy-and-Freddy---MERN-shop" target="_blank" rel="noopener noreferrer">
+                    <a href="https://github.com/DanielSkoros/WeCreate/" target="_blank" rel="noopener noreferrer">
                         <button class="cta">Github</button>
                     </a>
-                    <a href="https://teddy-and-freddy.herokuapp.com/" target="_blank" rel="noopener noreferrer">
-                        <button class="cta cta--filled">Heroku</button>
+                    <a href="https://danielskoros.github.io/WeCreate/" target="_blank" rel="noopener noreferrer">
+                        <button class="cta cta--filled">Online</button>
                     </a>
                 </div>
             </div>
@@ -104,26 +118,32 @@
     </section>
     <hr />
 
-    <footer>
+    <footer id="contact" class="show-on-scroll">
         <h1 class="heading__light">Say hello to me</h1>
         <div class="container">
             <div>
-                <form class="footer__form">
+                <form class="footer__form" action="https://postmail.invotes.com/send"
+                      method="post" id="email_form">
+                    <input type="hidden" name="access_token" value="kczbk68x8hsecalwibl19qpq" />
+                    <input type="hidden" name="success_url" value="." />
+                    <input type="hidden" name="error_url" value="." />
+                    <label>
+                        <span class="floating-label">subject</span>
+                        <input type="text" class="footer__input" name="subject" minlength="5" required >
+                    </label>
                     <label>
                         <span class="floating-label">name</span>
-                        <input type="text" class="footer__input">
+                        <input type="text" class="footer__input" name="extra_name" minlength="2" required >
                     </label>
                     <label>
                         <span class="floating-label">e-mail</span>
-                        <input type="text" class="footer__input">
+                        <input type="email" class="footer__input" name="reply_to" minlength="5" required >
                     </label>
                     <label>
                         <span class="floating-label">message</span>
-                        <textarea></textarea>
+                        <textarea name="text" minlength="5" required ></textarea>
                     </label>
-                    <button class="cta cta--filled cta--footer">
-                        send
-                    </button>
+                    <input class="cta cta--filled cta--footer" id="submit_form" type="submit" value="send">
                 </form>
             </div>
         </div>

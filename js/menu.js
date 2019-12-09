@@ -9,8 +9,15 @@ const page = document.querySelector(full);
 
 menu.addEventListener('click', () => {
    menu.classList.toggle('active');
-   items.forEach(item => item.classList.toggle('animateOnce'));
-   page.classList.toggle('blur');
+    page.classList.toggle('blur');
+    items.forEach(item => {
+       item.classList.toggle('animateOnce');
+       item.addEventListener('click', () => {
+           menu.classList.remove('active');
+           items.forEach(item => item.classList.remove('animateOnce'));
+           page.classList.remove('blur');
+       })
+   });
 });
 
 page.addEventListener('click', () => {
