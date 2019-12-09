@@ -14,7 +14,7 @@ body {
 
 .blur {
   transition: all 0.4s ease-in-out;
-  filter: blur(2px);
+  filter: blur(2px) grayscale(100%);
 }
 
 .heading__light {
@@ -54,8 +54,6 @@ nav {
 nav ul {
   position: relative;
   top: 40px;
-  display: flex;
-  justify-content: flex-start;
 }
 
 hr {
@@ -112,6 +110,10 @@ section:not(:first-child) {
 
 .cta--white {
   color: white;
+}
+
+.cta--black {
+  color: black;
 }
 
 .cta--filled {
@@ -226,6 +228,9 @@ section:not(:first-child) {
 .card .card_description {
   font-size: 0.9em;
   color: rgba(0, 0, 0, 0.8);
+}
+.card .buttons {
+  margin-top: 30px;
 }
 
 footer {
