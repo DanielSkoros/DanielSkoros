@@ -35,7 +35,7 @@ const changeMenuColorHandler = () => {
             item.firstChild.style.color = 'white'
         })
     }
-}
+};
 
 const landing = document.querySelector('.landing');
 
