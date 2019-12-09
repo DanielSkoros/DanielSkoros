@@ -7,17 +7,24 @@ const menu = document.querySelector(navTrigger);
 const items = document.querySelectorAll(navItem);
 const page = document.querySelector(full);
 
-menu.addEventListener('click', () => {
-   menu.classList.toggle('active');
+const handleMenu = () => {
+    menu.classList.toggle('active');
     page.classList.toggle('blur');
     items.forEach(item => {
-       item.classList.toggle('animateOnce');
-       item.addEventListener('click', () => {
-           menu.classList.remove('active');
-           items.forEach(item => item.classList.remove('animateOnce'));
-           page.classList.remove('blur');
-       })
-   });
+        item.classList.toggle('animateOnce');
+        item.addEventListener('click', () => {
+            menu.classList.remove('active');
+            items.forEach(item => item.classList.remove('animateOnce'));
+            page.classList.remove('blur');
+        })
+    });
+};
+
+menu.addEventListener('click',handleMenu);
+menu.addEventListener('keydown',event => {
+    if (event.keyCode === 13){
+        handleMenu();
+    }
 });
 
 page.addEventListener('click', () => {

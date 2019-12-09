@@ -137,10 +137,11 @@ section:not(:first-child){
   h1 {
     font-size: 2em;
   }
-    h5 {
+    p {
       padding: 20px 0;
       width: 80%;
-      font-size: 1.2em;
+      font-weight: bold;
+      font-size: 1.3em;
     }
   .social {
     padding-top: 25px;
@@ -166,7 +167,7 @@ section:not(:first-child){
       height: 150px;
       font-size: 3.5em;
       text-align: center;
-        i {
+        span {
           color: black;
           flex: 1 1 33%;
           margin: auto;
@@ -330,7 +331,7 @@ textarea::placeholder {
 
   .stack__languages {
     flex-wrap: nowrap;
-      i {
+      span{
         flex: 1 1 16% !important;
       }
   }
@@ -341,15 +342,24 @@ textarea::placeholder {
     justify-content: space-around;
     align-items: center;
       .card__image {
-        width: 600px;
+        width: 400px;
         margin: 0;
       }
       .card__text {
-        max-width: 475px;
+        max-width: 375px;
       }
     .buttons a:first-child {
       margin-right: 15px;
     }
   }
+}
+
+@media screen and (min-width: 1279px){
+ .card {
+   .card__image {
+     width: 600px;
+     margin: 0;
+   }
+ }
 }
 

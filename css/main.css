@@ -140,10 +140,11 @@ section:not(:first-child) {
 .landing h1 {
   font-size: 2em;
 }
-.landing h5 {
+.landing p {
   padding: 20px 0;
   width: 80%;
-  font-size: 1.2em;
+  font-weight: bold;
+  font-size: 1.3em;
 }
 .landing .social {
   padding-top: 25px;
@@ -169,34 +170,34 @@ section:not(:first-child) {
   font-size: 3.5em;
   text-align: center;
 }
-.stack .stack__languages i {
+.stack .stack__languages span {
   color: black;
   flex: 1 1 33%;
   margin: auto;
   opacity: 0;
   transition: all 0.3s 0.3s ease-out;
 }
-.stack .stack__languages i:nth-child(1) {
+.stack .stack__languages span:nth-child(1) {
   color: #F16529;
   transition-delay: 100ms;
 }
-.stack .stack__languages i:nth-child(2) {
+.stack .stack__languages span:nth-child(2) {
   color: #2965f1;
   transition-delay: 200ms;
 }
-.stack .stack__languages i:nth-child(3) {
+.stack .stack__languages span:nth-child(3) {
   color: #f0db4f;
   transition-delay: 300ms;
 }
-.stack .stack__languages i:nth-child(4) {
+.stack .stack__languages span:nth-child(4) {
   color: #61dafb;
   transition-delay: 400ms;
 }
-.stack .stack__languages i:nth-child(5) {
+.stack .stack__languages span:nth-child(5) {
   color: #68a063;
   transition-delay: 500ms;
 }
-.stack .stack__languages i:nth-child(6) {
+.stack .stack__languages span:nth-child(6) {
   color: #000;
   transition-delay: 600ms;
 }
@@ -332,7 +333,7 @@ textarea::placeholder {
   .stack__languages {
     flex-wrap: nowrap;
   }
-  .stack__languages i {
+  .stack__languages span {
     flex: 1 1 16% !important;
   }
 
@@ -343,14 +344,20 @@ textarea::placeholder {
     align-items: center;
   }
   .card .card__image {
-    width: 600px;
+    width: 400px;
     margin: 0;
   }
   .card .card__text {
-    max-width: 475px;
+    max-width: 375px;
   }
   .card .buttons a:first-child {
     margin-right: 15px;
+  }
+}
+@media screen and (min-width: 1279px) {
+  .card .card__image {
+    width: 600px;
+    margin: 0;
   }
 }
 

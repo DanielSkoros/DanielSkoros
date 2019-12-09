@@ -16,7 +16,7 @@
 <body>
 <header>
     <nav>
-        <div class="navTrigger">
+        <div class="navTrigger" tabindex=1>
             <i></i><i></i><i></i>
         </div>
         <ul class="nav__menu">
@@ -29,7 +29,7 @@
 <main class="fullpage">
     <section class="landing">
         <h1>Daniel Skoroś</h1>
-        <h5>Aspiring front end developer from Gdynia</h5>
+        <p>Aspiring front end developer from Gdynia</p>
         <a href="#contact" class="cta cta--white cta--landing">
             Contact
         </a>
@@ -43,19 +43,19 @@
        </div>
     </section>
     <section class="stack" id="stack">
-        <h1 class="heading__light">Tech stack</h1>
+        <h2 class="heading__light">Tech stack</h2>
         <div class="stack__languages">
-            <i class="fab fa-html5 show-on-scroll"></i>
-            <i class="fab fa-css3-alt show-on-scroll"></i>
-            <i class="fab fa-js show-on-scroll"></i>
-            <i class="fab fa-react show-on-scroll"></i>
-            <i class="fab fa-node show-on-scroll"></i>
-            <i class="fab fa-git show-on-scroll"></i>
+            <span aria-label="HTML5" class="fab fa-html5 show-on-scroll"></span>
+            <span aria-label="CSS" class="fab fa-css3-alt show-on-scroll"></span>
+            <span aria-label="JavaScript" class="fab fa-js show-on-scroll"></span>
+            <span aria-label="React" class="fab fa-react show-on-scroll"></span>
+            <span aria-label="NodeJs" class="fab fa-node show-on-scroll"></span>
+            <span aria-label="Git" class="fab fa-git show-on-scroll"></span>
         </div>
     </section>
     <hr />
     <section class="projects" id="projects">
-        <h1 class="heading__light">Projects</h1>
+        <h2 class="heading__light">Projects</h2>
         <div class="card show-on-scroll">
             <div class="card__image">
                 <img src="./img/teddy.jpg" alt="Teddy and Freddy preview" class=".teddy">
@@ -122,7 +122,7 @@
     <hr />
 
     <footer id="contact" class="show-on-scroll">
-        <h1 class="heading__light">Say hello to me</h1>
+        <h2 class="heading__light">Say hello to me</h2>
         <div class="container">
             <div>
                 <form class="footer__form" action="https://postmail.invotes.com/send"
