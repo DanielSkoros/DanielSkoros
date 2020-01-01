@@ -74,8 +74,7 @@ section:not(:first-child){
     margin-left: 0;
   }
   opacity: 0;
-  visibility: hidden;
-  display: block;
+  display: none;
   &.animateOnce {
     -webkit-animation: fadeInFromNone 0.3s ease-out normal forwards;
     -moz-animation: fadeInFromNone 0.3s ease-out normal forwards;

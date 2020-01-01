@@ -81,14 +81,13 @@
   }
 
   1% {
-    visibility: visible;
     display: block;
     opacity: 0;
   }
 
   100% {
     transform: translateY(0);
-    visibility: visible;
+    display: block;
     opacity: 1;
   }
 }
