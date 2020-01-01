@@ -10,11 +10,12 @@ const items = document.querySelectorAll(navItem);
 const page = document.querySelector(full);
 
 const handleMenu = (e) => {
+    items.forEach(item => {
+    item.classList.toggle('animateOnce');
+});
     menu.classList.toggle('active');
     page.classList.toggle('blur');
-    items.forEach(item => {
-        item.classList.toggle('animateOnce');
-    });
+
 };
 
 nav.addEventListener('click',handleMenu);
