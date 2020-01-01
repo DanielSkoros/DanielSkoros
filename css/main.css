@@ -69,25 +69,26 @@ section:not(:first-child) {
   text-align: right;
   margin-top: 25px;
   opacity: 0;
-  display: none;
+  visibility: hidden;
+  transform: translateY(70px);
+  transition: all 0.7s ease;
 }
 .nav__item:not(:first-child) {
   margin-left: 0;
 }
 .nav__item.animateOnce {
-  -webkit-animation: fadeInFromNone 0.3s ease-out normal forwards;
-  -moz-animation: fadeInFromNone 0.3s ease-out normal forwards;
-  -o-animation: fadeInFromNone 0.3s ease-out normal forwards;
-  animation: fadeInFromNone 0.3s ease-out normal forwards;
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
 }
 .nav__item:nth-child(1) {
-  animation-delay: 200ms;
+  transition-delay: 200ms;
 }
 .nav__item:nth-child(2) {
-  animation-delay: 400ms;
+  transition-delay: 400ms;
 }
 .nav__item:nth-child(3) {
-  animation-delay: 600ms;
+  transition-delay: 600ms;
 }
 
 .fullpage {

@@ -74,16 +74,17 @@ section:not(:first-child){
     margin-left: 0;
   }
   opacity: 0;
-  display: none;
+  visibility: hidden;
+  transform: translateY(70px);
+  transition: all 0.7s ease;
   &.animateOnce {
-    -webkit-animation: fadeInFromNone 0.3s ease-out normal forwards;
-    -moz-animation: fadeInFromNone 0.3s ease-out normal forwards;
-    -o-animation: fadeInFromNone 0.3s ease-out normal forwards;
-    animation: fadeInFromNone 0.3s ease-out normal forwards;
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
   }
   @for $i from 1 through 3 {
     &:nth-child(#{$i}) {
-      animation-delay: 200ms * $i;
+      transition-delay: 200ms * $i;
     }
   }
 }
