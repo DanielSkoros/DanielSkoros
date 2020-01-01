@@ -71,7 +71,8 @@ section:not(:first-child) {
   opacity: 0;
   visibility: hidden;
   transform: translateY(70px);
-  transition: all 0.7s ease;
+  transition: opacity 0.7s ease, visibility 0.7s ease, transform 0.7s ease;
+  will-change: transform;
 }
 .nav__item:not(:first-child) {
   margin-left: 0;
