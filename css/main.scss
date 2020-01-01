@@ -14,7 +14,7 @@ body {
 
 .blur {
   transition: all 0.4s ease-in-out;
-  filter: blur(2px) brightness(30%) grayscale(100%);
+  filter: blur(2px) grayscale(100%);
 }
 
 .heading__light {
