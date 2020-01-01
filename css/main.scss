@@ -77,7 +77,7 @@ section:not(:first-child){
   visibility: hidden;
   transform: translateY(70px);
   transition: opacity  0.7s ease, visibility  0.7s ease, transform  0.7s ease ;
-  will-change: transform;
+  will-change: transform, opacity, visibility;
   &.animateOnce {
     opacity: 1;
     visibility: visible;
