@@ -237,6 +237,7 @@ section:not(:first-child){
 
 footer {
   width: 100%;
+  margin-top: 100px;
   padding: 100px 0;
   opacity: 0;
   transition: all 1.5s .3s ease-out;
@@ -251,6 +252,7 @@ footer {
 }
 
 .footer__form{
+  padding-top: 100px;
   display: flex;
   flex-direction: column;
 }
